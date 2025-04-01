@@ -1,0 +1,103 @@
+/* style4.css placeholder - Add your 300+ line CSS here */
+body {
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle at center, #0f0c29, #302b63, #24243e);
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    background: repeating-linear-gradient(
+        45deg,
+        rgba(255, 0, 150, 0.1),
+        rgba(255, 0, 150, 0.1) 2px,
+        transparent 2px,
+        transparent 50px
+    );
+    animation: moveLines 15s linear infinite;
+    z-index: -1;
+}
+
+@keyframes moveLines {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(50px, 50px); }
+}
+
+.portfolio-wrapper {
+    max-width: 1100px;
+    margin: 50px auto;
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid #ff00ff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
+}
+
+.portfolio-name {
+    text-align: center;
+    font-size: 4rem;
+    color: #0ff;
+    text-shadow: 0 0 20px #0ff;
+}
+
+.portfolio-interest {
+    text-align: center;
+    color: #ff00ff;
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #00f0ff;
+    border-left: 5px solid #ff00ff;
+    padding-left: 10px;
+    margin-top: 30px;
+}
+
+ul li {
+    background: rgba(255, 0, 255, 0.1);
+    margin: 6px 0;
+    padding: 10px;
+    border-left: 3px solid #0ff;
+    transition: all 0.3s;
+}
+
+ul li:hover {
+    background-color: rgba(0, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+.portfolio-project-gallery img {
+    width: 30%;
+    margin: 1%;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+
+.portfolio-project-gallery img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 15px #ff00ff;
+}
+
+.portfolio-footer a {
+    display: inline-block;
+    padding: 12px 24px;
+    background: linear-gradient(90deg, #0ff, #ff00ff);
+    color: #000;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.portfolio-footer a:hover {
+    background: linear-gradient(90deg, #ff00ff, #0ff);
+}
